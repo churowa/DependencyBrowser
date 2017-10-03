@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12AD29821B1F059BEA6C2866 /* Pods_DependencyBrowser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AAC064002C595F852B4C5B5 /* Pods_DependencyBrowser.framework */; };
 		15857A4B1F81F250001C8D05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15857A4A1F81F250001C8D05 /* AppDelegate.swift */; };
 		15857A4D1F81F250001C8D05 /* DepedencyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15857A4C1F81F250001C8D05 /* DepedencyListViewController.swift */; };
 		15857A501F81F250001C8D05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15857A4E1F81F250001C8D05 /* Main.storyboard */; };
@@ -14,6 +15,7 @@
 		15857A551F81F250001C8D05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15857A531F81F250001C8D05 /* LaunchScreen.storyboard */; };
 		15857A601F81F250001C8D05 /* DependencyBrowserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15857A5F1F81F250001C8D05 /* DependencyBrowserTests.swift */; };
 		15857A6D1F820BD8001C8D05 /* Dependencies.plist in Resources */ = {isa = PBXBuildFile; fileRef = 15857A6C1F820BD8001C8D05 /* Dependencies.plist */; };
+		15857A761F8357CB001C8D05 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15857A751F8357AE001C8D05 /* RxSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,10 @@
 		15857A5F1F81F250001C8D05 /* DependencyBrowserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyBrowserTests.swift; sourceTree = "<group>"; };
 		15857A611F81F250001C8D05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15857A6C1F820BD8001C8D05 /* Dependencies.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Dependencies.plist; sourceTree = "<group>"; };
+		15857A751F8357AE001C8D05 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		2AAC064002C595F852B4C5B5 /* Pods_DependencyBrowser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DependencyBrowser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73ABF098BEB8F9EAC5186C38 /* Pods-DependencyBrowser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DependencyBrowser.release.xcconfig"; path = "Pods/Target Support Files/Pods-DependencyBrowser/Pods-DependencyBrowser.release.xcconfig"; sourceTree = "<group>"; };
+		EF511F2320A28D21D2B7E92E /* Pods-DependencyBrowser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DependencyBrowser.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DependencyBrowser/Pods-DependencyBrowser.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15857A761F8357CB001C8D05 /* RxSwift.framework in Frameworks */,
+				12AD29821B1F059BEA6C2866 /* Pods_DependencyBrowser.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +72,8 @@
 				15857A491F81F250001C8D05 /* DependencyBrowser */,
 				15857A5E1F81F250001C8D05 /* DependencyBrowserTests */,
 				15857A481F81F250001C8D05 /* Products */,
+				7C8995D0C39A45CA4A4A52DA /* Pods */,
+				7ACD8C767CA808F254630790 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +109,24 @@
 			path = DependencyBrowserTests;
 			sourceTree = "<group>";
 		};
+		7ACD8C767CA808F254630790 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15857A751F8357AE001C8D05 /* RxSwift.framework */,
+				2AAC064002C595F852B4C5B5 /* Pods_DependencyBrowser.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7C8995D0C39A45CA4A4A52DA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EF511F2320A28D21D2B7E92E /* Pods-DependencyBrowser.debug.xcconfig */,
+				73ABF098BEB8F9EAC5186C38 /* Pods-DependencyBrowser.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +134,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15857A641F81F250001C8D05 /* Build configuration list for PBXNativeTarget "DependencyBrowser" */;
 			buildPhases = (
+				15857A741F8350E8001C8D05 /* ShellScript */,
+				564CE514A1F28CDE8EDB6E56 /* [CP] Check Pods Manifest.lock */,
 				15857A431F81F250001C8D05 /* Sources */,
 				15857A441F81F250001C8D05 /* Frameworks */,
 				15857A451F81F250001C8D05 /* Resources */,
+				91CF01FA32D53178740A5876 /* [CP] Embed Pods Frameworks */,
+				B98170B437D0D3927779A99A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -197,6 +229,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		15857A741F8350E8001C8D05 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		564CE514A1F28CDE8EDB6E56 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DependencyBrowser-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91CF01FA32D53178740A5876 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DependencyBrowser/Pods-DependencyBrowser-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DependencyBrowser/Pods-DependencyBrowser-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B98170B437D0D3927779A99A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DependencyBrowser/Pods-DependencyBrowser-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		15857A431F81F250001C8D05 /* Sources */ = {
@@ -355,10 +456,15 @@
 		};
 		15857A651F81F250001C8D05 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF511F2320A28D21D2B7E92E /* Pods-DependencyBrowser.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2952WXY235;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DependencyBrowser/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.francischary.DependencyBrowser;
@@ -370,10 +476,15 @@
 		};
 		15857A661F81F250001C8D05 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73ABF098BEB8F9EAC5186C38 /* Pods-DependencyBrowser.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2952WXY235;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DependencyBrowser/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.francischary.DependencyBrowser;
