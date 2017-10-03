@@ -134,8 +134,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15857A641F81F250001C8D05 /* Build configuration list for PBXNativeTarget "DependencyBrowser" */;
 			buildPhases = (
-				15857A741F8350E8001C8D05 /* ShellScript */,
+				159D119F1F836DB800503367 /* Generate Dependency List */,
 				564CE514A1F28CDE8EDB6E56 /* [CP] Check Pods Manifest.lock */,
+				15857A741F8350E8001C8D05 /* Copy Carthage Frameworks */,
 				15857A431F81F250001C8D05 /* Sources */,
 				15857A441F81F250001C8D05 /* Frameworks */,
 				15857A451F81F250001C8D05 /* Resources */,
@@ -231,7 +232,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		15857A741F8350E8001C8D05 /* ShellScript */ = {
+		15857A741F8350E8001C8D05 /* Copy Carthage Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -239,12 +240,27 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 			);
+			name = "Copy Carthage Frameworks";
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		159D119F1F836DB800503367 /* Generate Dependency List */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Dependency List";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/bin/sh generate_dependencies.sh";
+			shellScript = "";
 		};
 		564CE514A1F28CDE8EDB6E56 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -272,10 +288,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DependencyBrowser/Pods-DependencyBrowser-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Hue/Hue.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hue.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

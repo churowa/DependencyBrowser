@@ -1,12 +1,15 @@
 PODS:
   - Alamofire (4.5.0)
+  - Hue (2.0.1)
 
 DEPENDENCIES:
   - Alamofire
+  - Hue
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  Hue: 354caec055fdc9d38b5ef33ca2e7224721843baf
 
-PODFILE CHECKSUM: 93ed23f078ff8d3fd4adb5d400b78e8c9550908f
+PODFILE CHECKSUM: 955b38b80a0b55add7d51cd21dbfecf2aaf0036f
 
 COCOAPODS: 1.3.1
